@@ -1,0 +1,67 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block content1 %}
+<div class="row my-5">
+    <div class="col-3 d-flex justify-content-center align-items-center">
+        <img src="{% static 'images/dphoto.jpg' %}" alt="Image" class="about-images">
+    </div>
+    <div class="col-9 text-left text-light mt-3 "style="padding-left: 50px;" >
+        <h2>Hello !</h2>
+        <p class="fs-5">
+            I am passionate software developer with expertise in Java, Python, React.js, and Android development.
+            Experienced in AI and ML projects, including image generation, face recognition, price prediction, and clustering algorithms.
+            Skilled in web development using React.js with a Python backend, building interactive and user-friendly applications.
+            Strong interest in DevOps practices, with hands-on experience in Bash scripting and automation.
+            Enthusiastic about developing futuristic tools and systems in Go language to create impactful and interactive solutions.
+        </p>
+        <p class="fs-5">
+            Exploring futuristic tech trends and experimenting with new programming languages.
+            Enthusiastic traveler and adventurer (Sagittarius vibes!) who loves meeting new people and gaining diverse perspectives.
+            Aiming to make technology more accessible and impactful through innovative solutions.
+        </p>
+    </div>
+</div>
+<div class="row my-2">
+    <h2 class="text-center" style="color: aquamarine;"> My Tech Stack </h2>
+    <div class="d-flex justify-content-around align-items-center my-5">
+        <img src="{% static 'images/html.png' %}" 
+            alt="HTML Logo"
+            width="70"
+            height="70"
+            class="img-fluid"
+            />
+        
+            <img src="{% static 'images/js.png' %}" 
+            alt="JS Logo"
+            width="70"
+            height="70"
+            class="img-fluid"
+            />
+
+            <img src="{% static 'images/react.png' %}" 
+            alt="React Logo"
+            width="70"
+            height="70"
+            class="img-fluid"/>
+
+            <img src="{% static 'images/java.png' %}" 
+            alt="Java Logo"
+            width="70"
+            height="70"
+            class="img-fluid"/>
+
+            <img src="{% static 'images/python.jpeg' %}" 
+            alt="HTML Logo"
+            width="70"
+            height="70"
+            class="img-fluid"/>
+
+            <img src="{% static 'images/go.png' %}" 
+            alt="Go Logo"
+            width="70"
+            height="70"
+            class="img-fluid">
+    </div>
+</div>
+
+{% endblock content1 %}

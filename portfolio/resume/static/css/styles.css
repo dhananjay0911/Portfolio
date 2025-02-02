@@ -1,0 +1,275 @@
+    @import url(
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+        
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+
+    .logo {
+        position: absolute;
+        top: 10px;  /* Adjust vertical positioning */
+        left: 10px; /* Adjust horizontal positioning */
+        width: 35px;  /* Reduce size */
+        height: 35px; /* Reduce size */
+        border-radius: 50%; /* Make it circular */
+        background-color: black; /* Set background to black */
+        object-fit: cover; /* Ensure proper fit */
+        border: 1px solid white; /* Optional: White border for visibility */
+    }
+    
+    
+    
+    
+    .navbar-nav .nav-link:hover{
+        font-weight: bold;
+        color: rgb(2, 80, 80);
+    }
+        
+    .navbar-nav .nav-link:hover{
+        font-size: 20px ;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        
+    }
+    .navbar-nav li {
+        display: inline-block;
+        padding: 0px 10px;
+    }
+
+    .navbar-nav li a {
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .navbar-nav li a:hover {
+        color: greenyellow;
+        border: 2px solid blue;
+        box-shadow: 3px 3px 3px red, 3px 3px 3px blue;
+        border-radius: 1%;
+        margin: 5px;
+        padding: 12px;
+    }
+    .navbar-nav{
+        list-style: none;
+    }
+
+    .title{
+        color: rgb(219, 232, 233);
+    }
+
+    .circular-image-container {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid #380339;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circular-image {
+        width: 100%; /* Fit container width */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+    }
+
+    .social-link{
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid #2f0528;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-images{
+        border-radius: 20px;
+        border: solid #c40ef6;
+        padding: 1px;
+        width: 320px;
+        height: 340px;
+    }
+
+    /* In your style.css */
+    .project-container {
+        padding-top: 50px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        
+        
+    }
+
+    .project-image {
+        width: 100%;
+        height: 350px;
+        padding-right: 20px;
+        transition: transform 0.3s ease;
+        display: block;
+        position: relative;
+        z-index: 1;
+        border-radius: 25px;
+        border: 3px solid #690582 ;
+        box-sizing: border-box;
+    }
+    .project-container:hover .project-image{
+        transform: scale(1.1);
+    }
+    .project-details{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+        opacity: 0;
+        height: 100%;
+        align-items: center;
+        transition: opacity 0.3s ease;
+        text-align: center;
+        z-index: 2;
+
+    }
+    .project-container:hover .project-details {
+        opacity: 1;
+    }
+    .project-container a {
+        position: relative;
+        z-index: 3;  /* Make the link appear above the text box */
+    }
+
+    /* Ensure the container centers items */
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+    }
+
+    /* Style the individual internship containers */
+    .experience-container {
+        width: 450px; /* Increased size to accommodate details */
+        border: 2px solid #e0f61e;
+        border-radius: 10px; /* Curved corners */
+        padding: 10px;
+        margin: 15px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #000000;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    /* Hover effect for the containers */
+    .experience-container:hover {
+        transform: translateY(-5px); /* Slight lift effect */
+        box-shadow: 0px 6px 10px rgba(233, 7, 7, 0.15);
+    }
+
+    /* Style the company name */
+    .experience-container h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Style the images */
+    .expe-img {
+        width: 100%; /* Ensure the image takes the container's width */
+        height: auto;
+        max-height: 300px; /* Limit the height for consistency */
+        object-fit: cover; /* Ensure image fits inside its box */
+        border-radius: 10px; /* Match the border radius of the container */
+        border: 2px solid #ec2222; /* Add a border around the image */
+    }
+
+    /* Style the details button */
+    .details-btn {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    /* Hover effect for the button */
+    .details-btn:hover {
+        background-color: #b30000;
+    }
+
+    /* Style the details container */
+    .details-container {
+        display: none; /* Hidden by default */
+        margin-top: 10px;
+        font-size: 14px;
+        color: #f9fdff;
+        text-align: left; /* Align details text to the left */
+    }
+
+    /* Add padding and formatting for details */
+    .details-container p {
+        margin: 0;
+        padding: 5px 0;
+        line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .experience-container {
+            width: 90%; /* Full width on smaller screens */
+        }
+    }
+
+
+
+    .Certificate-container {
+        padding-top: 50px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .cert-img {
+        width: 100%;
+        height: 350px;
+        transition: transform 0.3s ease;
+        display: block;
+        position: relative;
+        z-index: 1;
+        border-radius: 25px;
+        border: 3px solid #690582;
+        box-sizing: border-box;
+        object-fit: cover;  /* Ensures images maintain their aspect ratio */
+    }
+    
+    .Certificate-container:hover .cert-img {
+        transform: scale(1.1);
+    }
+    
+    /* Improve responsiveness */
+    @media (max-width: 768px) {
+        .cert-img {
+            height: 250px;  /* Reduce height for smaller screens */
+        }
+    }
+    
+    /* Optional: Improve text readability */
+    .Certificate-container h4 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
