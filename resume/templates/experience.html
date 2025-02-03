@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+<div class="d-flex flex-wrap justify-content-center align-items-start">
+    {% for expe in experience %}
+    <div class="p-3 text-center experience-container" style="width: 450px;">
+        <h4>{{ expe.company }}</h4>
+        <a href="{{ expe.link }}" target="_blank">
+            <img src="{% static expe.img %}" class="expe-img">
+        </a>
+        <div class="mt-2">
+            <button class="btn btn-primary details-btn" onclick="showDetails('details-{{ forloop.counter }}')">
+                Details
+            </button>
+        </div>
+        <div id="details-{{ forloop.counter }}" class="details-container" style="display: none;">
+            <p>
+                {{ expe.details }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- JavaScript Function for Toggling Details -->
+<script>
+    function showDetails(detailsId) {
+        const detailsDiv = document.getElementById(detailsId);
+        if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
+            detailsDiv.style.display = "block"; // Show details
+        } else {
+            detailsDiv.style.display = "none"; // Hide details
+        }
+    }
+</script>
+{% endblock content1 %}
